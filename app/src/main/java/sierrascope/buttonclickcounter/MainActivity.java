@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * testing commits from within the VCS in AndStudio
+ */
 public class MainActivity extends AppCompatActivity {
 
     // variables
@@ -47,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        if (fab != null)
+            fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -76,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
             toastMessage.show();
             // this resets the counter to 0. A single = sign assigns value double == checks value
             numTimesClicked = 0;
-            ourMessage.setText("Hello World!!");
+            String resetMessage = "Hello World!";
+            ourMessage.setText(resetMessage);
             return true;
         }
 
